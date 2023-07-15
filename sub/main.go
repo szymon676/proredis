@@ -35,6 +35,7 @@ func main() {
 	}()
 
 	http.HandleFunc("/count", handleCount)
+	http.ListenAndServe(":3000", nil)
 }
 
 func handleCount(w http.ResponseWriter, r *http.Request) {
